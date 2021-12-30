@@ -3,7 +3,7 @@
     font-weight: 700;
 }
 
-#inputMessage {
+#message {
     resize: none;
 }
 
@@ -34,4 +34,15 @@ main {
 
 h3 {
     margin: 0;
+}
+
+#contact-form {
+    --bs-gutter-x: 10rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    #radio-box {
+        display: block;
+    }
 }

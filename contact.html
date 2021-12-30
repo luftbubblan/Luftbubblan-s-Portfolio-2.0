@@ -53,13 +53,22 @@
             </div>
             <div class="col-12">
                 <label for="message"><h3>Leave a message <span id="dot">*</span></h3></label><br>
-                <input type="radio" name="radio" id="question" value="question">
-                <label for="question">Question</label>
-                <input type="radio" name="radio" id="comment" value="comment">
-                <label for="comment">Comment</label>
-                <input type="radio" name="radio" id="other" value="other">
-                <label for="other">Other</label><br>
+                
+                <span id="radio-box">
+                    <input type="radio" name="radio" id="question" value="question">
+                    <label for="question">Question</label>
+                </span>
+                
+                <span id="radio-box">
+                    <input type="radio" name="radio" id="comment" value="comment">
+                    <label for="comment">Comment</label>
+                </span>
 
+                <span id="radio-box">
+                    <input type="radio" name="radio" id="other" value="other">
+                    <label for="other">Other</label><br>
+                </span>
+                    
                 <textarea type="text" class="form-control" id="message" rows="7"></textarea>
             </div>
             

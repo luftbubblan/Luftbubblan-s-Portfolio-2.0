@@ -13,11 +13,26 @@ contact.addEventListener("submit", function(send){
     const otherCheck     = document.getElementById("other")
 
     let errorMessage = "";
+
+
+    function emailValidation(email) {
+        const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (filter.test(email.value)) {
+            console.log("Valid E-mail");
+            return "valid";
+        } else {
+            console.log("Invalid E-mail");
+            return "invalid";}
+    }
+
+
     if(inputFirstName.value === "") {
         errorMessage += "First name is required<br>";
     }
     if(inputEmail.value === "") {
         errorMessage += "E-mail is required<br>";
+    } else if(emailValidation(inputEmail) == "invalid") {
+        errorMessage += "Not a complete Email<br>"
     }
     if(questionCheck.checked !== true &&
        commentCheck.checked !== true &&
@@ -27,17 +42,6 @@ contact.addEventListener("submit", function(send){
     if(inputMessage.value === "") {
         errorMessage += "A message is required<br>";
     }
-    if(emailValidation(inputEmail) != true) {
-        errorMessage += "Not a complete Email"
-    }
-
-
-
-
-
-
-
-
 
 
     if(errorMessage !== "") {
@@ -47,27 +51,4 @@ contact.addEventListener("submit", function(send){
         errorOutput.innerHTML = `<div class="alert alert-success" role="alert">
             Thank you for the message!</div>`;
     }
-
-
-
-
-    function emailValidation(email) {
-        const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        if (filter.test(email.value)) {
-            return true;
-        } else {
-            return false;}
-        }
-
-
-console.log(emailValidation(inputEmail));
-
-
-
-
-
-
-
-
-
 });
