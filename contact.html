@@ -49,10 +49,17 @@
             </div>
             <div class="col-12">
                 <label for="email" class="form-label">E-mail <span id="dot">*</span></label>
-                <input type="email" class="form-control" id="email">
+                <input type="text" class="form-control" id="email">
             </div>
             <div class="col-12">
-                <label for="message" class="form-label"><h3>Leave a message <span id="dot">*</span></h3></label>
+                <label for="message"><h3>Leave a message <span id="dot">*</span></h3></label><br>
+                <input type="radio" name="radio" id="question" value="question">
+                <label for="question">Question</label>
+                <input type="radio" name="radio" id="comment" value="comment">
+                <label for="comment">Comment</label>
+                <input type="radio" name="radio" id="other" value="other">
+                <label for="other">Other</label><br>
+
                 <textarea type="text" class="form-control" id="message" rows="7"></textarea>
             </div>
             
