@@ -27,20 +27,20 @@ contact.addEventListener("submit", function(send){
 
 
     if(inputFirstName.value === "") {
-        errorMessage += "First name is required<br>";
+        errorMessage += "<li>First name is required</li>";
     }
     if(inputEmail.value === "") {
-        errorMessage += "E-mail is required<br>";
+        errorMessage += "<li>E-mail is required</li>";
     } else if(emailValidation(inputEmail) == "invalid") {
-        errorMessage += "Not a complete Email<br>"
+        errorMessage += "<li>Not a complete Email</li>"
     }
     if(questionCheck.checked !== true &&
        commentCheck.checked !== true &&
        otherCheck.checked !== true) {
-        errorMessage += "Choose if it is a Question, Comment or Other<br>"
+        errorMessage += "<li>Choose if it is a Question, Comment or Other</li>"
     }
     if(inputMessage.value === "") {
-        errorMessage += "A message is required<br>";
+        errorMessage += "<li>A message is required</li>";
     }
 
 
@@ -49,6 +49,6 @@ contact.addEventListener("submit", function(send){
             ${errorMessage}</div>`;
     } else {
         errorOutput.innerHTML = `<div class="alert alert-success" role="alert">
-            Thank you for the message!</div>`;
+            Thank you for the message! Your message has been sent.</div>`;
     }
 });
